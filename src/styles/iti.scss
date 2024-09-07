@@ -1,0 +1,86 @@
+@import './utils/variables';
+
+.iti {
+  width: 100%;
+}
+
+.iti__input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid $input-text-color;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.iti__input:focus {
+  border-color: $iti-input-focus-color;
+}
+
+.iti__flag-container {
+  background: $iti-flag-container-color;
+  border-right: 2px solid $input-text-color;
+  border-radius: 8px 0 0 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.iti__flag {
+  width: 20px;
+  height: 15px;
+}
+
+.iti__country-list {
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: $white-color;
+  border: 2px solid $input-text-color;
+  border-radius: 8px;
+}
+
+.iti__country {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.iti__country:hover {
+  background-color: $iti-country-hover;
+}
+
+.iti__country.selected {
+  background-color: $iti-input-focus-color;
+  color: $white-color;
+}
+
+.iti__selected-flag {
+  padding-right: 15px;
+  padding-left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.iti__country .iti__flag {
+  margin-right: 10px;
+}
+
+.iti__arrow {
+  border-top: 5px solid $iti-arrow-color;
+}
+
+input.iti__input.error {
+  border-color: $title-and-submit-button-color;
+}
+
+input.iti__input.error:focus {
+  border-color: $title-and-submit-button-color-hover;
+}
+
+.iti__country-list {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid $iti-country-list-color;
+}

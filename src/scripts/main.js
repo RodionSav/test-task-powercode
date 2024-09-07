@@ -21,33 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("date").textContent = formattedDate;
 
   // --- Countdown Timer ---
-  const webinarEndTime = new Date(
-    today.getFullYear(),
-    today.getMonth(),
-    today.getDate(),
-    21,
-    0,
-    0
-  );
-
   function updateTime() {
     const now = new Date();
-    const remainingTime = webinarEndTime - now;
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
 
-    if (remainingTime > 0) {
-      const hours = Math.floor(remainingTime / (1000 * 60 * 60));
-      const minutes = Math.floor(
-        (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-      );
-      document.getElementById(
-        "duration"
-      ).textContent = `${hours}ч ${minutes}мин`;
-    } else {
-      document.getElementById("duration").textContent = "Вебинар завершён";
-    }
+    let decimalMinutes = (minutes / 60).toFixed(1).replace('.', ',');
+
+    let formattedTime = decimalMinutes === "0,0" ? `${hours} часа` : `${hours},${decimalMinutes.split(',')[1]} часа`;
+
+    document.getElementById("duration").textContent = formattedTime;
   }
 
-  setInterval(updateTime, 1000);
+  setInterval(updateTime, 60000);
   updateTime();
 
   // --- Initialize Phone Input ---

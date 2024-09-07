@@ -8,6 +8,10 @@
     line-height: 26px;
     text-align: center;
 
+    @include onPhone {
+      font-size: 20px;
+    }
+
     &-free {
       color: $title-and-submit-button-color;
     }
@@ -19,6 +23,10 @@
     font-size: 12px;
     text-align: center;
     opacity: 0.5;
+
+    @include onPhone {
+      font-size: 11px;
+    }
 
     &_decoration {
       border-bottom: 1px solid $white-color;

@@ -7,11 +7,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   max-width: 1040px;
   padding: 24px 56px;
+  box-sizing: border-box;
 
   @include onPhone {
+    width: 100%;
     padding: 28px 30px;
+  }
+
+  @include onDesktop {
+    grid-row: 1 / 2;
   }
 
   &__logo {
@@ -69,9 +76,12 @@
       &__title {
         color: $white-color;
         font-size: 14px;
+        line-height: 14px;
+        font-weight: 600;
 
         @include onPhone {
           font-size: 11px;
+          line-height: 8.31px;
         }
       }
     }
