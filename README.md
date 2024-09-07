@@ -46,7 +46,7 @@ The project is based on the Figma design:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/form.git
+   git clone https://github.com/your-repo/test-task-powercode.git
    cd form
    npm install
    npm start
